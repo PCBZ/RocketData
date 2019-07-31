@@ -17,8 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        let chatsViewController = ChatsViewController()
-        let navigationController = UINavigationController(rootViewController: chatsViewController)
+//        let chatsViewController = ChatsViewController()
+        let projectionVC = UIStoryboard(name: "Storyboard", bundle: nil).instantiateViewController(withIdentifier: "projectionVC")
+        
+        let navigationController = UINavigationController(rootViewController: projectionVC)
         window?.rootViewController = navigationController
 
         window?.makeKeyAndVisible()

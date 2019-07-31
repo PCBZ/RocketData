@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12FB154B22F142B300E37F71 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12FB154A22F142B300E37F71 /* Storyboard.storyboard */; };
+		12FB154D22F143AC00E37F71 /* ProjectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FB154C22F143AC00E37F71 /* ProjectionViewController.swift */; };
+		12FB154F22F1451200E37F71 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FB154E22F1451200E37F71 /* ProfileModel.swift */; };
 		61C795A71D428D1100631563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C795A61D428D1100631563 /* AppDelegate.swift */; };
 		61C795AE1D428D1100631563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C795AD1D428D1100631563 /* Assets.xcassets */; };
 		61C795B11D428D1100631563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C795AF1D428D1100631563 /* LaunchScreen.storyboard */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12FB154A22F142B300E37F71 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		12FB154C22F143AC00E37F71 /* ProjectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectionViewController.swift; sourceTree = "<group>"; };
+		12FB154E22F1451200E37F71 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		4A95683A73DB7ECFA5EC00EB /* Pods-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleApp/Pods-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		61C795A31D428D1000631563 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C795A61D428D1100631563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 			children = (
 				61C795C21D42918600631563 /* SampleAppModel.swift */,
 				61C795C01D42917F00631563 /* UserModel.swift */,
+				12FB154E22F1451200E37F71 /* ProfileModel.swift */,
 				61C795C41D42935000631563 /* MessageModel.swift */,
 			);
 			path = Models;
@@ -126,6 +133,8 @@
 				61EB34A91D4BAC5C00EACC17 /* ChatsViewController.xib */,
 				61EB34AA1D4BAC5C00EACC17 /* MessagesViewController.swift */,
 				61EB34AB1D4BAC5C00EACC17 /* MessagesViewController.xib */,
+				12FB154A22F142B300E37F71 /* Storyboard.storyboard */,
+				12FB154C22F143AC00E37F71 /* ProjectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -190,6 +199,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -212,6 +222,7 @@
 				61C795B11D428D1100631563 /* LaunchScreen.storyboard in Resources */,
 				61EB34B31D4BAC5C00EACC17 /* ChatsViewController.xib in Resources */,
 				61C795AE1D428D1100631563 /* Assets.xcassets in Resources */,
+				12FB154B22F142B300E37F71 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,10 +279,12 @@
 				61C795C51D42935000631563 /* MessageModel.swift in Sources */,
 				61EB34B01D4BAC5C00EACC17 /* RocketDataCacheDelegate.swift in Sources */,
 				61EB34B11D4BAC5C00EACC17 /* RocketDataSetup.swift in Sources */,
+				12FB154F22F1451200E37F71 /* ProfileModel.swift in Sources */,
 				61EB34B71D4BAC7500EACC17 /* CollectionCacheKey.swift in Sources */,
 				61EB34B21D4BAC5C00EACC17 /* ChatsViewController.swift in Sources */,
 				61C795C11D42917F00631563 /* UserModel.swift in Sources */,
 				61EB34B41D4BAC5C00EACC17 /* MessagesViewController.swift in Sources */,
+				12FB154D22F143AC00E37F71 /* ProjectionViewController.swift in Sources */,
 				61C795A71D428D1100631563 /* AppDelegate.swift in Sources */,
 				61EB34AF1D4BAC5C00EACC17 /* NetworkManager.swift in Sources */,
 				61C795C31D42918600631563 /* SampleAppModel.swift in Sources */,
