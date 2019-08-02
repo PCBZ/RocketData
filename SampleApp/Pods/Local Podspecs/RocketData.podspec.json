@@ -1,6 +1,6 @@
 {
   "name": "RocketData",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "license": {
     "type": "Apache License, Version 2.0"
   },
@@ -9,16 +9,22 @@
   "summary": "A non-blocking CoreData replacement which uses immutable models.",
   "source": {
     "git": "https://github.com/plivesey/RocketData.git",
-    "tag": "7.0.0"
+    "tag": "8.0.0"
   },
   "source_files": "RocketData/**/*.swift",
   "platforms": {
-    "ios": "8.0"
+    "ios": "8.0",
+    "tvos": "9.0"
   },
-  "frameworks": "Foundation",
+  "ios": {
+    "frameworks": "Foundation"
+  },
+  "tvos": {
+    "frameworks": "Foundation"
+  },
   "dependencies": {
     "ConsistencyManager": [
-      "~> 7.0.0"
+      "~> 8.0.0"
     ]
   }
 }

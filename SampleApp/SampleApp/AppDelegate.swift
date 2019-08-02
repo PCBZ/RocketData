@@ -18,16 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
 
 //        let chatsViewController = ChatsViewController()
-        let projectionVC = UIStoryboard(name: "Storyboard", bundle: nil).instantiateViewController(withIdentifier: "projectionVC")
+        let rootVC = UIStoryboard(name: "Storyboard", bundle: nil).instantiateViewController(withIdentifier: "tabbar")
         
-        let navigationController = UINavigationController(rootViewController: projectionVC)
-        window?.rootViewController = navigationController
+//        let navigationController = UINavigationController(rootViewController: projectionVC)
+        window?.rootViewController = rootVC
 
         window?.makeKeyAndVisible()
 
         // We're going to send random push notifications to the app to show how we can use Rocket Data to handle data changes
         // The push notifications are going to be users coming online/offline and new messages
-        NetworkManager.startRandomPushNotifications()
+//        NetworkManager.startRandomPushNotifications()
         
         return true
     }

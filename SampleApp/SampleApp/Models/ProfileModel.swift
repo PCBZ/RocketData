@@ -15,7 +15,6 @@ final class ProfileModel: SampleAppModel, Equatable {
     let online: Bool
     let age : Int
     
-    
     init(id: Int, name: String, online: Bool, age: Int = -100) {
         self.id = id
         self.name = name
