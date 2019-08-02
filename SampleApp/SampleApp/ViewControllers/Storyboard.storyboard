@@ -133,6 +133,12 @@
                                     <action selector="segmentSelected:" destination="dMa-ux-cZ5" eventType="valueChanged" id="w2D-To-1Gc"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpu-ZO-3yc">
+                                <rect key="frame" x="0.0" y="71" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -141,7 +147,10 @@
                             <constraint firstItem="Z3i-wL-55z" firstAttribute="centerX" secondItem="KHH-qs-E6w" secondAttribute="centerX" id="E8Y-Fw-uey"/>
                             <constraint firstItem="KHH-qs-E6w" firstAttribute="trailing" secondItem="8Iv-Kl-TWU" secondAttribute="trailing" id="Imv-z7-fHl"/>
                             <constraint firstItem="Vi7-V7-loz" firstAttribute="centerX" secondItem="KHH-qs-E6w" secondAttribute="centerX" constant="4.5" id="JXo-Ti-i4V"/>
+                            <constraint firstItem="Mpu-ZO-3yc" firstAttribute="top" secondItem="KHH-qs-E6w" secondAttribute="top" constant="27" id="X6h-jg-BfI"/>
                             <constraint firstItem="Z3i-wL-55z" firstAttribute="top" secondItem="8Iv-Kl-TWU" secondAttribute="bottom" constant="168" id="ZGc-lV-PIh"/>
+                            <constraint firstItem="KHH-qs-E6w" firstAttribute="trailing" secondItem="Mpu-ZO-3yc" secondAttribute="trailing" id="k6N-ua-1ml"/>
+                            <constraint firstItem="Mpu-ZO-3yc" firstAttribute="leading" secondItem="KHH-qs-E6w" secondAttribute="leading" id="lzQ-Is-50j"/>
                             <constraint firstItem="FqQ-7v-T2z" firstAttribute="leading" secondItem="KHH-qs-E6w" secondAttribute="leading" id="m4V-NB-g5r"/>
                             <constraint firstItem="KHH-qs-E6w" firstAttribute="trailing" secondItem="FqQ-7v-T2z" secondAttribute="trailing" id="stw-ei-W7H"/>
                             <constraint firstItem="8Iv-Kl-TWU" firstAttribute="top" secondItem="FqQ-7v-T2z" secondAttribute="bottom" constant="41" id="tF6-6n-rmG"/>
@@ -153,6 +162,7 @@
                     <connections>
                         <outlet property="label1" destination="FqQ-7v-T2z" id="jcO-Ik-XmS"/>
                         <outlet property="label2" destination="8Iv-Kl-TWU" id="j5N-f5-zCo"/>
+                        <outlet property="senderLabel" destination="Mpu-ZO-3yc" id="9IL-oX-VNB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wf-vh-Exj" userLabel="First Responder" sceneMemberID="firstResponder"/>

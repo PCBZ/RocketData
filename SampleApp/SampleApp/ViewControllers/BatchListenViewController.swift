@@ -16,6 +16,8 @@ class BatchListenViewController: UIViewController, UITextFieldDelegate, BatchDat
     
     @IBOutlet weak var label2: UILabel!
     
+    @IBOutlet weak var senderLabel: UILabel!
+    
     fileprivate let userDataProvider1 = DataProvider<MessageModel>()
     
     fileprivate let userDataProvider2 = DataProvider<MessageModel>()
@@ -38,6 +40,7 @@ class BatchListenViewController: UIViewController, UITextFieldDelegate, BatchDat
         
         label1.text = String(format: "message:%@ from:%@", message1.text, message1.sender.name)
         label2.text = String(format: "message:%@ from:%@", message2.text, message2.sender.name)
+        senderLabel.text = sender?.name
         
         batchDataProvider = BatchDataProviderListener(dataProviders: [userDataProvider1, userDataProvider2], dataModelManager: DataModelManager.sharedInstance);
         batchDataProvider?.delegate = self
@@ -47,6 +50,8 @@ class BatchListenViewController: UIViewController, UITextFieldDelegate, BatchDat
         
         userDataProvider1.setData(message1)
         userDataProvider2.setData(message2)
+
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -74,6 +79,7 @@ class BatchListenViewController: UIViewController, UITextFieldDelegate, BatchDat
     func batchDataProviderListener(_ batchListener: BatchDataProviderListener, hasUpdatedDataProviders dataProviders: [ConsistencyManagerListener], context: Any?) {
         if let dataProvider = dataProviders[0] as? DataProvider<MessageModel> {
             label1.text = String(format: "message:%@ from:%@", dataProvider.data!.text, dataProvider.data!.sender.name)
+            senderLabel.text = dataProvider.data!.sender.name
         }
         if let dataProvider = dataProviders[1] as? DataProvider<MessageModel> {
             label2.text = String(format: "message:%@ from:%@", dataProvider.data!.text, dataProvider.data!.sender.name)
@@ -81,6 +87,11 @@ class BatchListenViewController: UIViewController, UITextFieldDelegate, BatchDat
     }
     
     func dataProviderHasUpdatedData<T>(_ dataProvider: DataProvider<T>, context: Any?) where T : SimpleModel {
+        
+        if let data = dataProvider.data as? MessageModel  {
+            senderLabel.text = data.sender.name
+        }
+        
         if dataProvider === userDataProvider1 {
             label1.text = String(format: "message:%@ from:%@", userDataProvider1.data!.text, userDataProvider1.data!.sender.name)
         }
